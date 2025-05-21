@@ -1,0 +1,14 @@
+{
+  "name": "My Trello Power-Up",
+  "description": "Power-Up from Netlify",
+  "author": "momahmood",
+  "iframeConnectorUrl": "https://idyllic-cheesecake-0fca7b.netlify.app/",
+  "capabilities": {
+    "card-buttons": [
+      {
+        "text": "Say Hello",
+        "callback": "sayHello"
+      }
+    ]
+  }
+}
