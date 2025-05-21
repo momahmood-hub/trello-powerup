@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/"
+  query = { capabilities = "1" }
+  to = "/capabilities.json"
+  status = 200
