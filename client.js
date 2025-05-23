@@ -1,5 +1,3 @@
-var t = TrelloPowerUp.iframe();
-
 TrelloPowerUp.initialize({
   // 🔘 Board-level button for syncing to Google Sheets
   'board-buttons': function (t, options) {
