@@ -1,6 +1,7 @@
 var t = TrelloPowerUp.iframe();
 
 TrelloPowerUp.initialize({
+  // 🔘 Board-level button for syncing to Google Sheets
   'board-buttons': function (t, options) {
     return [{
       icon: 'https://cdn-icons-png.flaticon.com/512/2682/2682065.png',
@@ -14,7 +15,11 @@ TrelloPowerUp.initialize({
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                   boardName: board.name,
-                  cards: cards.map(c => ({ name: c.name, desc: c.desc, url: c.url }))
+                  cards: cards.map(c => ({
+                    name: c.name,
+                    desc: c.desc,
+                    url: c.url
+                  }))
                 })
               })
             )
@@ -24,6 +29,18 @@ TrelloPowerUp.initialize({
             console.error(err);
             t.alert({ message: 'Failed to sync!' });
           });
+      }
+    }];
+  },
+
+  // 🔘 Card-level button for saying hello
+  'card-buttons': function (t, options) {
+    return [{
+      icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
+      text: 'Say Hello',
+      callback: function (t) {
+        alert('Hello from Trello Power-Up!');
+        return t.closePopup();
       }
     }];
   }
