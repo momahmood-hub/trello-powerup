@@ -10,7 +10,7 @@ TrelloPowerUp.initialize({
             t.cards('all').then(cards =>
               fetch('https://script.google.com/macros/s/AKfycbwQAMRWeHHEZhSOgLTf7DF0fWb9bdyLsXr_RABN5aXVRGLrJg0QHjuB8rwIP7mXyw6m/exec', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify({
                   boardName: board.name,
                   cards: cards.map(c => ({
