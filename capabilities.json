@@ -1,9 +1,23 @@
 {
-  "name": "My Trello Power-Up",
-  "description": "Power-Up from Netlify",
-  "author": "momahmood",
-  "iframeConnectorUrl": "https://idyllic-cheesecake-0fca7b.netlify.app/",
-  "capabilities": {
-    "card-buttons": true
-  }
+  "name": "Google Sheets Sync",
+  "iframe": {
+    "url": "https://idyllic-cheesecake-0fca7b.netlify.app/",
+    "height": 100
+  },
+  "board-buttons": [
+    {
+      "text": "Sync to Google Sheets",
+      "callback": {
+        "function": "board-buttons"
+      }
+    }
+  ],
+  "card-buttons": [
+    {
+      "text": "Say Hello",
+      "callback": {
+        "function": "card-buttons"
+      }
+    }
+  ]
 }
